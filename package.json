@@ -1,5 +1,6 @@
 {
   "name": "yen-admigo",
+  "homepage": "https://yenadmigo.samstack.site",
   "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {
@@ -8,7 +9,9 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "lint": "expo lint"
+    "lint": "expo lint",
+    "build:web": "npx expo export -p web",
+    "deploy": "npm run build:web && gh-pages -d dist"
   },
   "dependencies": {
     "@expo/vector-icons": "^15.0.3",
@@ -49,6 +52,7 @@
     "@types/react": "~19.1.0",
     "eslint": "^9.25.0",
     "eslint-config-expo": "~10.0.0",
+    "gh-pages": "^6.3.0",
     "typescript": "~5.9.2"
   },
   "private": true
